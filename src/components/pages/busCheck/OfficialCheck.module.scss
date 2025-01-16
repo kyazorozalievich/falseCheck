@@ -1,0 +1,118 @@
+.OfficialCheck {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: end;
+  flex-direction: column;
+  justify-content: end;
+  .topContent {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #34c759;
+    width: 100%;
+    height: 10vh;
+    h4 {
+      cursor: pointer;
+    }
+  }
+  .bg {
+    width: 100%;
+    height: 90vh;
+    background: rgb(69, 69, 69);
+    .content {
+      display: flex;
+      align-items: end;
+      justify-content: center;
+      width: 100%;
+      height: 90vh;
+      .offCheck {
+        display: flex;
+        align-items: start;
+        flex-direction: column;
+        gap: 20px;
+        position: relative;
+        width: 100%;
+        height: 85vh;
+        background: white;
+        padding-inline: 20px;
+        padding-top: 20px;
+        color: black;
+        .mbank {
+          width: 120px;
+          height: 40px;
+        }
+        .textM {
+          position: absolute;
+          top: 0;
+          right: 0;
+          width: 200px;
+          height: 80px;
+        }
+        hr {
+          width: 100%;
+          border: 0.5px solid #34c759;
+          margin-top: 10px;
+        }
+        .textBlock {
+          width: 100%;
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+          gap: 20px;
+          .text {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            h5 {
+              font-size: 12px;
+              font-weight: 400;
+            }
+          }
+        }
+        .itogo {
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          h2 {
+            font-size: 15px;
+            span {
+              border-bottom: 2px solid black;
+            }
+          }
+        }
+        .pechatContent {
+          width: 100%;
+          display: flex;
+          align-items: end;
+          justify-content: end;
+          margin-top: -10px;
+          img {
+            width: 100px;
+            height: 100px;
+          }
+        }
+        .bottomText {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+          flex-direction: column;
+          gap: 10px;
+          margin-top: -10px;
+          h6 {
+            font-size: 10px;
+            font-weight: 400;
+            color: gray;
+            span {
+              color: #34c759;
+              font-weight: 500;
+            }
+          }
+        }
+      }
+    }
+  }
+}

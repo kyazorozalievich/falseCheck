@@ -1,0 +1,60 @@
+.Welcome {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  .content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    gap: 50px;
+    h2 {
+      width: 80%; 
+      text-align: center;
+      font-size: 15px;
+    }
+    .blocks {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      width: 100%;
+      justify-content: space-around;
+      .block {
+        width: 150px;
+        height: 150px;
+        background: #000;
+        border-radius: 5px;
+        position: relative;
+        cursor: pointer;
+        &:hover {
+          img {
+            transform: scale(1.05);
+            transition: 0.8s;
+          }
+        }
+        img {
+          border-radius: 5px;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+        h4 {
+          width: 100%;
+          height: 100%;
+          background: #00000064;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          position: absolute;
+          top: 0;
+          left: 0;
+          color: white;
+          border-radius: 5px;
+        }
+      }
+    }
+  }
+}
