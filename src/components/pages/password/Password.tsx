@@ -9,7 +9,7 @@ const Password = () => {
   function onPassword() {
     if (password.trim() === "") {
       alert("Введите пароль");
-    } else if (password === "хакер007") {
+    } else if (password === "2025") {
       router.push("/main");
       setPassword("");
     } else {
