@@ -6,12 +6,36 @@ namespace SHOP {
     phone: number;
     name: string;
   }
-  type postShopCheckResponse = IQr[];
-  type postShopCheckRequest = IQr;
+  type postShopCheckResponse = {
+    current_page: number;
+    per_page: number;
+    total_pages: number;
+    total_items: number;
+    data: IQr[];
+  };
+  type postShopCheckRequest = {
+    current_page: number;
+    per_page: number;
+    total_pages: number;
+    total_items: number;
+    data: IQr;
+  };
 
-  type getShopCheckResponse = IQr[];
+  type getShopCheckResponse = {
+    current_page: number;
+    per_page: number;
+    total_pages: number;
+    total_items: number;
+    data: IQr[];
+  };
   type getShopCheckRequest = void;
 
-  type deleteShopCheckResponse = IQr[];
+  type deleteShopCheckResponse = {
+    current_page: number;
+    per_page: number;
+    total_pages: number;
+    total_items: number;
+    data: IQr[];
+  };
   type deleteShopCheckRequest = number | undefined;
 }

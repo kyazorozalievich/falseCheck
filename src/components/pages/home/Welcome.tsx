@@ -7,8 +7,9 @@ import { useRouter } from "next/navigation";
 
 const Welcome = () => {
   const router = useRouter();
+
   return (
-    <section className={scss.Welcome}> 
+    <section className={scss.Welcome}>
       <div className="container">
         <div className={scss.content}>
           <h2>

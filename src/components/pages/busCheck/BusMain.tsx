@@ -21,15 +21,17 @@ const BusMain = () => {
     const date = now.toLocaleDateString();
     const hours = String(now.getHours()).padStart(2, "0");
     const minutes = String(now.getMinutes()).padStart(2, "0");
+
     const newCheck = {
       type: "bus",
       date: date,
       time: `${hours}:${minutes}`,
       number: data.number,
     };
+
     await busCheckPost(newCheck);
     router.push("/main/bus/check");
-    reset(); 
+    reset();
   };
 
   return (

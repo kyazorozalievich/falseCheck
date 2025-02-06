@@ -15,6 +15,7 @@ import { useState } from "react";
 
 const BusCheck = () => {
   const { data } = useBusGetQuery();
+  const dataCheck = data?.data;
   const router = useRouter();
   const [modal, setModal] = useState(false);
   const [loader, setLoader] = useState(false);
@@ -71,10 +72,10 @@ const BusCheck = () => {
                 </h5>
               </div>
             </div>
-            <button onClick={()=> router.push('/main/bus')}>Закрыть</button>
+            <button onClick={() => router.push("/main/bus")}>Закрыть</button>
           </div>
           {modal
-            ? data?.slice(-1).map(
+            ? dataCheck?.slice(-1).map(
                 (el) =>
                   el.type === "bus" && (
                     <div className={scss.checkModal} key={el._id}>

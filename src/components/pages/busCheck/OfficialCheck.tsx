@@ -10,6 +10,7 @@ import { useRouter } from "next/navigation";
 
 const OfficialCheck = () => {
   const { data } = useBusGetQuery();
+  const dataCheck = data?.data;
   const router = useRouter();
   return (
     <section className={scss.OfficialCheck}>
@@ -25,7 +26,7 @@ const OfficialCheck = () => {
       <div className={scss.bg}>
         <div className="container">
           <div className={scss.content}>
-            {data?.slice(-1).map((el) => (
+            {dataCheck?.slice(-1).map((el) => (
               <div className={scss.offCheck} key={el._id}>
                 <Image src={mbankIcon} alt="mbank" className={scss.mbank} />
                 <Image src={mText} alt="all" className={scss.textM} />

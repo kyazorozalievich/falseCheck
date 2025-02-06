@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 
 const BusDelete = () => {
   const { data } = useBusGetQuery();
+  const dataCheck = data?.data;
   const [deleteBusCheck] = useBusDeleteMutation();
   const router = useRouter();
 
@@ -12,7 +13,7 @@ const BusDelete = () => {
     <section className={scss.BusDelete}>
       <div className="container"> 
         <div className={scss.content}>
-          {data?.length! <= 0 ? (
+          {dataCheck?.length! <= 0 ? (
             <div className={scss.textError}>
               <h2>Карточки для удаления не существует!</h2>
               <button onClick={() => router.push("/main/bus")}>
@@ -20,10 +21,7 @@ const BusDelete = () => {
               </button>
             </div>
           ) : (
-            data
-              ?.slice()
-              .reverse()
-              .map(
+            dataCheck?.slice().reverse().map(
                 (el) =>
                   el.type === "bus" && (
                     <div className={scss.delBlock} key={el._id}>
